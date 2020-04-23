@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element choice="1" label="New field 1" max_length="40" name="new_field_1" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Choice 3" value="Choice 3"/>
+                <element inactive_on_update="false" label="Choice 1" sequence="100" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="200" value="Choice 2"/>
+            </choice>
+        </element>
+        <element default="30" label="New field 2" max_length="40" name="new_field_2" type="string"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="human resources" label="Request type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="human resources"/>
+                <element inactive_on_update="false" label="Legal" sequence="1" value="legal"/>
+                <element inactive_on_update="false" label="IS/IT" sequence="2" value="is/it"/>
+                <element inactive_on_update="false" label="your dept choice" sequence="3" value="your dept choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="calendar_date_time"/>
+    </element>
+</database>
